@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Search App (Frontend)
 
-## Getting Started
+## Description
 
-First, run the development server:
+This is a job search application built with Next.js 14 and TypeScript.  
+Users can search for jobs, view job details, create a profile, save liked jobs, and receive job recommendations based on their profile.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search jobs by title using a free public API
+- View detailed information about each job
+- Create and edit a user profile (Name, Desired Job Title, About Me)
+- Save liked jobs to a favorites list stored in `localStorage`
+- View and remove jobs from the liked list
+- Receive job recommendations based on the created profile
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 14 with TypeScript
+- Tailwind CSS for styling
+- Formik and Yup for forms and validation
+- SWR for data fetching
+- Axios for API requests
+- LocalStorage for storing user profile and liked jobs
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `/app` – application pages (`/jobs`, `/create-profile`, `/liked`, `/job-details/[id]`, `/signIn`, `/signUp`)
+- `/components` – reusable UI components like JobCard, Header, Loader
+- `/context` – React context for managing liked jobs and user profile state
+- `/lib` – utility functions like API fetchers
+- `/types` – TypeScript type definitions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Run Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
+### git clone [<frontend repo url>](https://github.com/reb0rned/job-search-Frontend.git)
+2. Install dependencies:
+### npm install
+3. Run the development server:
+### nom run dev
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Deploy on Vercel
+## Backend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The backend API with authentication and user management is implemented separately using Express and MongoDB and can be found here:  
+[https://github.com/reb0rned/job-search-backend](https://github.com/reb0rned/job-search-backend)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo
+
+Check out the live demo deployed on Vercel:  
+[https://job-search-frontend-ltfl.vercel.app/](https://job-search-frontend-ltfl.vercel.app/)
+
+## Future Improvements
+
+- Integrate backend API fully for profile and auth data
+- Enhance UI/UX and responsive design
+- Add pagination and advanced job filtering
+- Add animations and better user feedback
+
+---
+
+Feel free to reach out if you have any questions or feedback!

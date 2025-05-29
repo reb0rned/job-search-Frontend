@@ -8,10 +8,7 @@ import { useLikes } from "../context/LikesProvider";
 
 const Liked = () => {
   const { liked, toggleLike } = useLikes();
-  const { data, error, isLoading } = useSWR(
-    "/search?query=Frontend&num_pages=1",
-    fetcher
-  );
+  const { data } = useSWR("/search?query=Frontend&num_pages=1", fetcher);
   const jobs: Job[] = data?.data || [];
 
   const likedJobs = jobs.filter((job) => liked.includes(job.job_id));

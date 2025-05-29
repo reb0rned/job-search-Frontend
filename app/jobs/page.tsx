@@ -1,6 +1,5 @@
 "use client";
 import useSWR from "swr";
-import { useContext, useEffect, useState } from "react";
 import JobCard from "../components/JobCard";
 import { fetcher } from "../lib/fetcher";
 import { Job } from "../types/Job";

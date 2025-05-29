@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Link from "next/link";
 import { Job } from "../types/Job";
 

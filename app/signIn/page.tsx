@@ -15,7 +15,8 @@ export default function SignInPage() {
     try {
       await axios.post(
         "https://job-search-backend-k5v2.onrender.com/api/auth/login",
-        { email, password }
+        { email, password },
+        { withCredentials: true }
       );
       router.push("/jobs");
     } catch (err) {
